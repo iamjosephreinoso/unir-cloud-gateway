@@ -4,7 +4,7 @@ server:
 ## Classic Eureka configuration
 eureka:
   instance:
-    preferIpAddress: true
+    preferIpAddress: false
     hostname: ${HOSTNAME:localhost}
     
   client:
@@ -34,6 +34,9 @@ spring:
             allowedHeaders: "*" ## All headers allowed
             allowedMethods:
             - POST
+            - PUT
+            - GET
+            - DELETE
       
 
 ## We enable the Actuator API to be able to access <<host>>/actuator/gateway/routes
